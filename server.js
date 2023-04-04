@@ -47,6 +47,9 @@ app.post("/update-profile", function (req, res) {
 
       let myquery = { userid: 1 };
       let newvalues = { $set: userObj };
+      console.log(db)
+      console.log(myquery)
+      console.log(newvalues)
 
       db.collection("users").updateOne(
         myquery,
